@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Search and explore movies">
+    <title>AlgBest</title>
+    <link rel="stylesheet" href="movie.css">
+    <link rel="shortcut icon" href="img/movieicon.png" type="image/x-icon">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">🎬 AlgBest</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#movies" class="nav-link">Movies</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#series" class="nav-link">Series</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#search" class="nav-link">Search</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home">
+        <h1>🎬 <b>Alg</b>Best</h1>
+        <form id="searchForm" role="search" aria-label="Movie search">
+            <label for="searchInput" class="visually-hidden">Search for a movie</label>
+            <input 
+                type="search" 
+                id="searchInput" 
+                name="query"
+                placeholder="Search for a movie..."
+                aria-label="Movie search input"
+                autocomplete="off"
+                required>
+            <button type="submit" id="searchBtn" aria-label="Submit search">Search</button>
+        </form>
+    </header>
+
+    <section id="search" class="featured-section search-section">
+        <h2 id="searchTitle" style="display: none;">🔍 Search Results</h2>
+        <main id="movieContainer" role="main" aria-live="polite"></main>
+    </section>
+
+    <section id="movies" class="featured-section">
+        <h2>🎬 Featured Movies</h2>
+        <div class="featured-grid">
+            <div class="featured-item">
+                <img src="img/1994-Shawshank-Redemption-The.jpg" alt="The Shawshank Redemption">
+                <h3>The Shawshank Redemption</h3>
+                <p class="year">1994</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/51Eq4-xce0L.jpg" alt="The Godfather">
+                <h3>The Godfather</h3>
+                <p class="year">1972</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/the-dark-knight-2008-movie-poster.avif" alt="The Dark Knight">
+                <h3>The Dark Knight</h3>
+                <p class="year">2008</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/inception.jpg" alt="Inception">
+                <h3>Inception</h3>
+                <p class="year">2010</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/Pulp-Fiction1.png" alt="Pulp Fiction">
+                <h3>Pulp Fiction</h3>
+                <p class="year">1994</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/whoami.jpg" alt="Who Am I">
+                <h3>Who Am I</h3>
+                <p class="year">2014</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/interstellar.jpg" alt="Interstellar">
+                <h3>Interstellar</h3>
+                <p class="year">2014</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/matrix.jpg" alt="The Matrix">
+                <h3>The Matrix</h3>
+                <p class="year">1999</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/creed.jpg" alt="Forrest Gump">
+                <h3>Creed II </h3>
+                <p class="year">1994</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/fightclub.jpg" alt="Fight Club">
+                <h3>Fight Club</h3>
+                <p class="year">1999</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/Thelord.jpg" alt="The Lord of the Rings">
+                <h3>The Lord of the Rings</h3>
+                <p class="year">2003</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/parasite_85.webp" alt="Parasite">
+                <h3>Parasite</h3>
+                <p class="year">2019</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/Gladiator_(2000_film_poster).png" alt="Gladiator">
+                <h3>Gladiator</h3>
+                <p class="year">2000</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/Prestige_poster.jpg" alt="The Prestige">
+                <h3>The Prestige</h3>
+                <p class="year">2006</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/goodfellas.jpg" alt="Goodfellas">
+                <h3>Goodfellas</h3>
+                <p class="year">1990</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/schindler-s-list.jpg" alt="Schindler's List">
+                <h3>Schindler's List</h3>
+                <p class="year">1993</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/oppenheimer.jpg" alt="Oppenheimer">
+                <h3>Oppenheimer</h3>
+                <p class="year">2023</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/Dune.jpg" alt="Dune">
+                <h3>Dune</h3>
+                <p class="year">2021</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/The_Batman_(film)_poster.jpg" alt="The Batman">
+                <h3>The Batman</h3>
+                <p class="year">2022</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/Joker_(2019_film)_poster.jpg" alt="Joker">
+                <h3>Joker</h3>
+                <p class="year">2019</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/Avengers_Endgame_poster.jpg" alt="Avengers: Endgame">
+                <h3>Avengers: Endgame</h3>
+                <p class="year">2019</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/Spider-Man_No_Way_Home_poster.jpg" alt="Spider-Man: No Way Home">
+                <h3>Spider-Man: No Way Home</h3>
+                <p class="year">2021</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/top-gun-maverick-latest-poster-tom-cruise.avif" alt="Top Gun: Maverick">
+                <h3>Top Gun: Maverick</h3>
+                <p class="year">2022</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="series" class="featured-section">
+        <h2>📺 Featured Series</h2>
+        <div class="featured-grid">
+            <div class="featured-item">
+                <img src="img/61rGH4Un9GL.jpg" alt="Breaking Bad">
+                <h3>Breaking Bad</h3>
+                <p class="year">2008-2013</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/stranger-things.jpg" alt="Stranger Things">
+                <h3>Stranger Things</h3>
+                <p class="year">2016-Present</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/GOT.webp" alt="Game of Thrones">
+                <h3>Game of Thrones</h3>
+                <p class="year">2011-2019</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/Thecrown.jpg" alt="The Crown">
+                <h3>The Crown</h3>
+                <p class="year">2016-Present</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/Theoffice.jpg" alt="The Office">
+                <h3>The Office</h3>
+                <p class="year">2005-2013</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/friends.jpg" alt="Friends">
+                <h3>Friends</h3>
+                <p class="year">1994-2004</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/cherlock.jpg" alt="Sherlock">
+                <h3>Sherlock</h3>
+                <p class="year">2010-2017</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/Themandalorian.jpg" alt="The Mandalorian">
+                <h3>The Mandalorian</h3>
+                <p class="year">2019-Present</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/the-last-of-us.jpeg" alt="The Last of Us">
+                <h3>The Last of Us</h3>
+                <p class="year">2023-Present</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/wednesday_8.webp" alt="Wednesday">
+                <h3>Wednesday</h3>
+                <p class="year">2022-Present</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/houseofdragon.jpg" alt="House of the Dragon">
+                <h3>House of the Dragon</h3>
+                <p class="year">2022-Present</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/Thewitch.jpg" alt="The Witcher">
+                <h3>The Witcher</h3>
+                <p class="year">2019-Present</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/peakyblinder.jpg" alt="Peaky Blinders">
+                <h3>Peaky Blinders</h3>
+                <p class="year">2013-2022</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/bettercallsaul.jpg" alt="Better Call Saul">
+                <h3>Better Call Saul</h3>
+                <p class="year">2015-2022</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/TheBoys.jpg" alt="The Boys">
+                <h3>The Boys</h3>
+                <p class="year">2019-Present</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/succession-tv-series-poster.avif" alt="Succession">
+                <h3>Succession</h3>
+                <p class="year">2018-2023</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/the_bear-565358093-mmed.jpg" alt="The Bear">
+                <h3>The Bear</h3>
+                <p class="year">2022-Present</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/squidgame.avif" alt="Squid Game">
+                <h3>Squid Game</h3>
+                <p class="year">2021-Present</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/blackmirror.jpg" alt="Black Mirror">
+                <h3>Black Mirror</h3>
+                <p class="year">2011-Present</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/arcane.jpg" alt="Arcane">
+                <h3>Arcane</h3>
+                <p class="year">2021-Present</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/the_wire-680717276-mmed.jpg" alt="The Wire">
+                <h3>The Wire</h3>
+                <p class="year">2002-2008</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/Chernobyl_2019_Miniseries.jpg" alt="Chernobyl">
+                <h3>Chernobyl</h3>
+                <p class="year">2019</p>
+            </div>
+            <div class="featured-item">
+                <img src="img/rick_and_morty_0.webp" alt="Rick and Morty">
+                <h3>Rick and Morty</h3>
+                <p class="year">2013-Present</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="movie.js"></script>
+</body>
+</html>
